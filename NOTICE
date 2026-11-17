@@ -1,0 +1,9 @@
+This project is derived from @modelcontextprotocol/server-postgres 0.6.2,
+originally published by Anthropic, PBC under the MIT License.
+
+Upstream source snapshot:
+https://github.com/modelcontextprotocol/servers-archived/tree/9be4674d1ddf8c469e6461a27a337eeb65f76c2e/src/postgres
+
+The upstream project is archived and unmaintained. This fork adds explicit
+write operations, transactional batches, structured column comments, safer
+result serialization, configurable schema discovery, and regression tests.

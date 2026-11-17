@@ -1,0 +1,55 @@
+{
+  "name": "postgres-mcp-server-x",
+  "version": "1.0.0",
+  "description": "Extended PostgreSQL MCP server with opt-in write and column comment tools",
+  "type": "module",
+  "bin": {
+    "postgres-mcp-server-x": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "test": "npm run build && node --test test/sql.test.js",
+    "test:integration": "npm run build && node test/integration.mjs && node test/mcp.integration.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "postgres",
+    "postgresql",
+    "database"
+  ],
+  "author": "xiaohan815",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohan815/postgres-mcp-server-x.git"
+  },
+  "homepage": "https://github.com/xiaohan815/postgres-mcp-server-x#readme",
+  "bugs": {
+    "url": "https://github.com/xiaohan815/postgres-mcp-server-x/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "pg": "8.23.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/pg": "^8.15.6",
+    "shx": "^0.4.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
